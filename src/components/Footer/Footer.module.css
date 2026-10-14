@@ -1,0 +1,440 @@
+
+/* =========================
+   Footer Container
+========================= */
+
+.footer {
+  width: 88%;
+  max-width: 1592px;
+  margin: 100px auto 40px;
+  padding: 60px;
+
+  box-sizing: border-box;
+
+  background-color: var(--white, #ffffff);
+  border: 2px solid var(--grey-15, #262626);
+  border-radius: 12px;
+  box-shadow: 6px 6px 0 #191919;
+
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+  color: var(--grey-15, #262626);
+}
+
+/* =========================
+   Top Section
+========================= */
+
+.topSection {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(0, 2fr);
+
+  align-items: start;
+  gap: 50px;
+}
+
+/* =========================
+   Brand Column
+========================= */
+
+.brandColumn {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo {
+  display: block;
+  width: 170px;
+  max-width: 100%;
+  height: auto;
+}
+
+.brandDescription {
+  max-width: 360px;
+  margin: 16px 0 25px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* =========================
+   Contact Information
+========================= */
+
+.contactList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+
+  color: var(--grey-15, #262626);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contactIcon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+  border: 1px solid var(--grey-15);
+  border-radius: 6px;
+}
+.iconImage {
+  display: block;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* =========================
+   Navigation Grid
+========================= */
+
+.linksGrid {
+  min-width: 0;
+
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  column-gap: 25px;
+  align-items: start;
+}
+
+/* =========================
+   Navigation Columns
+========================= */
+
+.linkColumn {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  font-weight: 500;
+}
+
+.columnTitle {
+  margin: 0 0 8px;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.linkColumn a {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  color: var(--grey-15, #262626);
+  text-decoration: none;
+}
+
+
+
+/* =========================
+   Bottom Section
+========================= */
+
+.bottomSection {
+  margin-top: 50px;
+  padding: 22px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  border-top: 1px solid #b3b3b3;
+  border-bottom: 1px solid #b3b3b3;
+}
+
+/* =========================
+   Legal Links
+========================= */
+
+.legalLinks {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.legalLinks a {
+  padding: 0 12px;
+
+  border-right: 1px solid #737373;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  color: var(--grey-15, #262626);
+  text-decoration: none;
+}
+
+.legalLinks a:first-child {
+  padding-left: 0;
+}
+
+.legalLinks a:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+
+/* =========================
+   Social Media
+========================= */
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.socialLinks a {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--orange-90, #ffdecc);
+  border: 1.5px solid var(--grey-15, #262626);
+  border-radius: 8px;
+
+  text-decoration: none;
+}
+
+.socialLinks a:hover {
+  background-color: var(--orange-80, #ffbe99);
+}
+
+.socialIcon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* =========================
+   Accessibility
+========================= */
+
+.footer a:focus-visible {
+  outline: 3px solid var(--orange-65, #ff8d4d);
+  outline-offset: 3px;
+}
+
+/* =========================
+   Copyright
+========================= */
+
+.copyright {
+  margin: 22px 0 0;
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  text-align: center;
+  color: #656567;
+}
+
+/* =========================
+   Laptop
+========================= */
+
+@media (max-width: 1200px) {
+  .footer {
+    width: 90%;
+    padding: 45px 35px;
+  }
+
+  .topSection {
+    grid-template-columns:
+      minmax(0, 1.1fr)
+      minmax(0, 2fr);
+
+    gap: 30px;
+  }
+
+  .linksGrid {
+    column-gap: 15px;
+  }
+
+  .columnTitle {
+    font-size: 15px;
+
+  }
+
+  .linkColumn a {
+    font-size: 13px;
+  }
+
+  .contactItem {
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 900px) {
+  .footer {
+    width: 90%;
+    padding: 35px 25px;
+  }
+
+  .topSection {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .linksGrid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+  .brandDescription {
+    max-width: 450px;
+  }
+
+  .bottomSection {
+    margin-top: 35px;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 767px) {
+  .footer {
+    width: calc(100% - 32px);
+    margin: 70px auto 20px;
+    padding: 30px 20px;
+  }
+
+  .topSection {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .brandColumn {
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .brandDescription {
+    margin: 15px 0 25px;
+    font-size: 13px;
+  }
+
+  .contactList {
+    gap: 12px;
+  }
+
+  .contactItem {
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .contactIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .iconImage {
+    width: 16px;
+    height: 16px;
+  }
+
+  .linksGrid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 30px 20px;
+  }
+
+  .linkColumn {
+    gap: 12px;
+  }
+
+  .columnTitle {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  .linkColumn a {
+    font-size: 12px;
+  }
+
+  .bottomSection {
+    margin-top: 30px;
+    padding: 20px 0;
+
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .legalLinks {
+    justify-content: center;
+  }
+
+  .legalLinks a {
+    padding: 0 8px;
+    font-size: 11px;
+  }
+
+  .socialLinks {
+    gap: 8px;
+  }
+
+  .socialLinks a {
+    width: 36px;
+    height: 36px;
+  }
+
+  .socialIcon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .copyright {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+}

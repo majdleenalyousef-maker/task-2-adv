@@ -1,0 +1,306 @@
+
+/* =========================
+   Pages Section
+========================= */
+
+.pagesSection {
+  width: 88%;
+  max-width: 1592px;
+  margin: 0 auto 120px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* =========================
+   Cards Grid
+========================= */
+
+.pagesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+}
+
+/* =========================
+   Page Card
+========================= */
+
+.pageCard {
+  min-width: 0;
+  min-height: 500px;
+  box-sizing: border-box;
+
+  padding: 60px 50px 50px;
+
+  background-color: var(--white, #ffffff);
+  border: 2px solid var(--grey-15, #262626);
+  border-radius: 12px;
+  box-shadow: 6px 6px 0 #1e1e1e;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* =========================
+   Card Title
+========================= */
+
+.cardTitle {
+  margin: 0 0 30px;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--grey-15, #262626);
+}
+
+/* =========================
+   Orange Decoration
+========================= */
+
+.decoration {
+  position: relative;
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-bottom: 35px;
+}
+
+/* Six peach rectangles */
+.decorLine {
+  position: relative;
+
+  flex: 1;
+  min-width: 0;
+  height: 12px;
+
+  background-color: var(--orange-80, #ffbe99);
+}
+
+/* Black line through each rectangle */
+.decorLine::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 8px;
+  top: 50%;
+
+  height: 2px;
+  background-color: var(--grey-15, #262626);
+  transform: translateY(-50%);
+}
+
+/* White circles on both ends */
+.decoration::before,
+.decoration::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+
+  background-color: var(--white, #ffffff);
+  border: 2px solid var(--grey-15, #262626);
+  border-radius: 50%;
+
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.decoration::before {
+  left: -10px;
+}
+
+.decoration::after {
+  right: -10px;
+}
+
+/* =========================
+   Card Description
+========================= */
+
+.cardDescription {
+  margin: 0;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--grey-15, #262626);
+}
+
+/* =========================
+   Learn More Button
+========================= */
+
+.learnMoreButton {
+  width: 100%;
+  min-height: 58px;
+  box-sizing: border-box;
+
+  margin-top: auto;
+  padding: 14px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  background-color: var(--orange-90, #ffdecc);
+  border: 2px solid var(--grey-15, #262626);
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 #1e1e1e;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--grey-15, #262626);
+  text-decoration: none;
+
+  transition: background-color 0.2s ease;
+}
+
+.learnMoreButton:hover {
+  background-color: var(--orange-80, #ffbe99);
+}
+
+.learnMoreButton:focus-visible {
+  outline: 3px solid var(--orange-65, #ff8d4d);
+  outline-offset: 4px;
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 1100px) {
+  .pagesSection {
+    width: 90%;
+    gap: 60px;
+  }
+
+  .pagesGrid {
+    gap: 25px;
+  }
+
+  .pageCard {
+    min-height: 440px;
+    padding: 40px 25px 30px;
+  }
+
+  .cardTitle {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .decoration {
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .decorLine {
+    height: 9px;
+  }
+
+  .decoration::before,
+  .decoration::after {
+    width: 16px;
+    height: 16px;
+  }
+
+  .decoration::before {
+    left: -8px;
+  }
+
+  .decoration::after {
+    right: -8px;
+  }
+
+  .cardDescription {
+    font-size: 14px;
+  }
+
+  .learnMoreButton {
+    min-height: 52px;
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 767px) {
+  .pagesSection {
+    width: calc(100% - 32px);
+    gap: 50px;
+    margin-bottom: 80px;
+  }
+
+  .pagesGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .pageCard {
+    min-height: 390px;
+    padding: 35px 20px 25px;
+  }
+
+  .cardTitle {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+
+  .decoration {
+    gap: 7px;
+    margin-bottom: 25px;
+  }
+
+  .decorLine {
+    height: 7px;
+  }
+
+  .decorLine::after {
+    height: 1.5px;
+    right: 4px;
+  }
+
+  .decoration::before,
+  .decoration::after {
+    width: 12px;
+    height: 12px;
+    border-width: 1.5px;
+  }
+
+  .decoration::before {
+    left: -6px;
+  }
+
+  .decoration::after {
+    right: -6px;
+  }
+
+  .cardDescription {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .learnMoreButton {
+    min-height: 48px;
+    padding: 12px;
+    font-size: 14px;
+  }
+}

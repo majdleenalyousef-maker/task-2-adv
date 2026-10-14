@@ -1,0 +1,221 @@
+
+/* =========================
+   FAQ Section
+========================= */
+
+.faqSection {
+  width: 88%;
+  max-width: 1592px;
+  margin: 0 auto 120px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* =========================
+   FAQ Grid
+========================= */
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  align-items: start;
+}
+
+/* =========================
+   FAQ Column
+========================= */
+
+.faqColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+/* =========================
+   FAQ Item
+========================= */
+
+.faqItem {
+  background-color: var(--orange-95, #ffefe5);
+  border: 2px solid var(--grey-15, #262626);
+  border-radius: 10px;
+  overflow: hidden;
+
+  transition: background-color 0.2s ease;
+}
+
+.faqItem.open {
+  background-color: var(--white, #ffffff);
+}
+
+/* =========================
+   Question Button
+========================= */
+
+.questionButton {
+  width: 100%;
+  padding: 24px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  color: var(--grey-15, #262626);
+}
+
+.question {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* =========================
+   Plus / Minus Icon
+========================= */
+
+.toggleIcon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--orange-95, #ffefe5);
+  border: 2px solid var(--grey-15, #262626);
+  border-radius: 6px;
+
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* =========================
+   Answer
+========================= */
+
+.answerContainer {
+  margin: 0 30px 24px;
+  padding-top: 20px;
+
+  border-top: 1px solid var(--grey-15, #262626);
+}
+
+.answer {
+  margin: 0;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--grey-15, #262626);
+}
+
+/* =========================
+   Accessibility
+========================= */
+
+.questionButton:focus-visible {
+  outline: 3px solid var(--orange-65, #ff8d4d);
+  outline-offset: -3px;
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 1100px) {
+  .faqSection {
+    width: 90%;
+    gap: 60px;
+  }
+
+  .faqGrid {
+    gap: 24px;
+  }
+
+  .faqColumn {
+    gap: 18px;
+  }
+
+  .questionButton {
+    padding: 20px;
+    gap: 12px;
+  }
+
+  .question {
+    font-size: 15px;
+  }
+
+  .answerContainer {
+    margin: 0 20px 20px;
+    padding-top: 16px;
+  }
+
+  .answer {
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 767px) {
+  .faqSection {
+    width: calc(100% - 32px);
+    gap: 50px;
+    margin-bottom: 80px;
+  }
+
+  .faqGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .faqColumn {
+    gap: 16px;
+  }
+
+  .faqItem {
+    border-radius: 8px;
+  }
+
+  .questionButton {
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .question {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .toggleIcon {
+    width: 28px;
+    height: 28px;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+
+  .answerContainer {
+    margin: 0 18px 18px;
+    padding-top: 16px;
+  }
+
+  .answer {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}

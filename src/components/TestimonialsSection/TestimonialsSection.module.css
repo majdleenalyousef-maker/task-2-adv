@@ -1,0 +1,266 @@
+
+/* =============================
+   Testimonials Section
+============================= */
+.testimonialsSection {
+  width: 84%;
+  max-width: 1592px;
+  margin: 0 auto 120px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* =============================
+   Testimonials Content
+============================= */
+
+.testimonialsContent {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 48px;
+  align-items: center;
+  column-gap: 40px;
+}
+
+/* =============================
+   Cards Grid
+============================= */
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+}
+
+/* =============================
+   Testimonial Card
+============================= */
+
+.testimonialCard {
+  min-width: 0;
+  min-height: 460px;
+  box-sizing: border-box;
+
+  background-color: var(--white, #ffffff);
+  border: 2px solid var(--grey-15, #262626);
+  border-radius: 12px;
+  box-shadow: 6px 6px 0 #1e1e1e;
+
+  padding: 45px 35px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  text-align: center;
+}
+
+/* =============================
+   Person Info
+============================= */
+
+.personInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+
+  border: 1px solid var(--grey-15, #262626);
+  border-radius: 50%;
+  object-fit: cover;
+
+  background-color: #fff5f0;
+}
+
+.personName {
+  margin: 0;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--grey-15, #262626);
+}
+
+/* =============================
+   Stars
+============================= */
+
+.stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  font-size: 24px;
+  line-height: 1;
+}
+
+.activeStar {
+  color: var(--orange-65, #ff8d4d);
+}
+
+.inactiveStar {
+  color: #d9d9d9;
+}
+
+/* =============================
+   Review
+============================= */
+
+.review {
+  margin: 0;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--grey-15, #262626);
+}
+
+/* =============================
+   Arrow Buttons
+============================= */
+
+.arrowButton {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--white, #ffffff);
+  border: 2px solid var(--grey-15, #262626);
+  border-radius: 8px;
+
+  color: var(--grey-15, #262626);
+  font-size: 24px;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+}
+
+.arrowButton:hover {
+  background-color: var(--orange-95, #ffefe5);
+}
+
+.arrowButton:focus-visible {
+  outline: 3px solid var(--orange-65, #ff8d4d);
+  outline-offset: 3px;
+}
+
+/* =============================
+   Tablet
+============================= */
+
+@media (max-width: 1100px) {
+  .testimonialsSection {
+    gap: 60px;
+  }
+
+  .testimonialsContent {
+    grid-template-columns: 42px minmax(0, 1fr) 42px;
+    column-gap: 20px;
+  }
+
+  .testimonialsGrid {
+    gap: 20px;
+  }
+
+  .testimonialCard {
+    min-height: 380px;
+    padding: 30px 18px;
+    gap: 22px;
+  }
+
+  .personName {
+    font-size: 18px;
+  }
+
+  .review {
+    font-size: 14px;
+  }
+
+  .arrowButton {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* =============================
+   Mobile
+============================= */
+
+@media (max-width: 767px) {
+  .testimonialsSection {
+    width: calc(100% - 32px);
+    gap: 50px;
+    margin-bottom: 80px;
+  }
+
+  .testimonialsContent {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 30px;
+  }
+
+  .testimonialsGrid {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    grid-template-columns: 1fr;
+  }
+
+  .testimonialCard {
+    min-height: 340px;
+    padding: 30px 25px;
+    gap: 24px;
+  }
+
+  .testimonialCard:not(:first-child) {
+    display: none;
+  }
+
+  .avatar {
+    width: 55px;
+    height: 55px;
+  }
+
+  .personName {
+    font-size: 18px;
+  }
+
+  .stars {
+    font-size: 22px;
+  }
+
+  .review {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .arrowButton {
+    width: 44px;
+    height: 44px;
+  }
+
+  .previousButton {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: end;
+  }
+
+  .nextButton {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+  }
+}
